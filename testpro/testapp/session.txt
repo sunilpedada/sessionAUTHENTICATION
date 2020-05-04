@@ -1,0 +1,19 @@
+------------------------------------------
+session management:
+-cookies
+-Django session framework(session API)
+-hidden form fields
+-url rewriting
+--------
+cookie:
+-To change in server response.set_cookie(cookiename,cookievalue)
+-TO get cookie from clint request
+request.COOKIES["KEY"]
+eg:d["key"],d.get("key"),d.get("key",0)
+-To change in server response.set_cookie(cookiename,cookievalue,max_age=180)
+------------------------------------------------------
+server side storing session object:
+request.session["name"]="aaa"
+request.session.get("name")
+request.session.set_expiry()
+-for geting result =>---- for k,v in request.session.items
