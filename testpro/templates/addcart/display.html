@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "addcart/base.html" %}
+{% block body_set %}
+{% if request.session %}
+<h1>list</h1>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>quantity</th>
+    </thead>
+    {% for k,v in request.session.items %}
+    <tr><td>{{k}}</td><td>{{v}}</td></tr>
+    {% endfor %}
+</table>
+    {% else %}
+    <h1>no items in table</h1>
+    {% endif %}
+{% endblock %}

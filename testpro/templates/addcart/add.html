@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'addcart/base.html' %}
+{% block body_set %}
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+            <div class="form-group">
+              <input type="submit" class="btn btn-lg" value="submit">
+            </div>
+        </form>
+        <a class="btn btn-lg" href="todisplay">display</a>
+</div>
+{% endblock %}

@@ -17,3 +17,11 @@ request.session["name"]="aaa"
 request.session.get("name")
 request.session.set_expiry()
 -for geting result =>---- for k,v in request.session.items
+-del request.session[sessionkey]
+--get_expriy_age()
+--get_expriy_date()
+-----------------------------
+before logout
+for k in request.session.keys():
+    del request.session[key]
+    ====================================>||before in setting.py SESSION_SAVE_EVERY_REQUEST=True }to work del
